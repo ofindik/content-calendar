@@ -1,6 +1,7 @@
 package dev.osmanfindik.contentcalendar.controller;
 
 import dev.osmanfindik.contentcalendar.model.Content;
+import dev.osmanfindik.contentcalendar.model.Status;
 import dev.osmanfindik.contentcalendar.repository.ContentRepository;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
@@ -48,5 +49,15 @@ public class ContentController {
 	@DeleteMapping("/{id}")
 	public void delete (@PathVariable Integer id) {
 		repository.deleteById (id);
+	}
+
+	@GetMapping("/filter/{keyword}")
+	public List<Content> findByTitle (@PathVariable String keyword) {
+		return repository.findAllByTitleContains (keyword);
+	}
+
+	@GetMapping("/filter/status/{status}")
+	public List<Content> findByStatus (@PathVariable Status status) {
+		return repository.listByStatus (status);
 	}
 }
