@@ -9,8 +9,8 @@ create table if not exists Content (
    url varchar(255)
 );
 
-insert into Content(title, description, status, content_type, date_created)
-values ('My Spring Data Blog Post', 'A post about spring data', 'IDEA', 'ARTICLE', CURRENT_TIMESTAMP);
+--insert into Content(title, description, status, content_type, date_created)
+--values ('My Spring Data Blog Post', 'A post about spring data', 'IDEA', 'ARTICLE', CURRENT_TIMESTAMP);
 
 /*
 CREATE TABLE IF NOT EXISTS Content (
