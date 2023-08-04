@@ -1,7 +1,7 @@
 package dev.osmanfindik.contentcalendar.controller;
 
 import dev.osmanfindik.contentcalendar.model.Content;
-import dev.osmanfindik.contentcalendar.repository.ContentCollectionRepository;
+import dev.osmanfindik.contentcalendar.repository.ContentRepository;
 import jakarta.validation.Valid;
 import org.springframework.http.HttpStatus;
 import org.springframework.web.bind.annotation.*;
@@ -13,9 +13,9 @@ import java.util.List;
 @RequestMapping("/api/content")
 @CrossOrigin
 public class ContentController {
-	private final ContentCollectionRepository repository;
+	private final ContentRepository repository;
 
-	public ContentController (ContentCollectionRepository repository) {
+	public ContentController (ContentRepository repository) {
 		this.repository = repository;
 	}
 
