@@ -24,21 +24,4 @@ public class Application {
 		RestTemplate restTemplate = (RestTemplate) context.getBean ("restTemplate");
 		System.out.println (restTemplate);
 	}
-
-	@Bean
-	CommandLineRunner commandLineRunner (ContentRepository contentRepository) {
-		return args -> {
-			// insert some data to database
-			Content content = new Content (
-					null,
-					"My Eleventh Blog Post",
-					"My Eleventh Blog Post",
-					Status.IDEA,
-					Type.ARTICLE,
-					LocalDateTime.now (),
-					null,
-					"");
-			contentRepository.save (content);
-		};
-	}
 }

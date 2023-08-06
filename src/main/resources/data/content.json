@@ -1,0 +1,32 @@
+[
+  {
+    "id": null,
+    "title": "My First Spring Data Blog Post",
+    "description": "First post about spring data",
+    "status": "IDEA",
+    "contentType": "ARTICLE",
+    "dateCreated": "2023-08-04T18:55:07.198453",
+    "dateUpdated": null,
+    "url": null
+  },
+  {
+    "id": null,
+    "title": "My Second Spring Data Blog Post",
+    "description": "A second post about spring data",
+    "status": "COMPLETED",
+    "contentType": "VIDEO",
+    "dateCreated": "2023-08-04T19:02:27.182823",
+    "dateUpdated": null,
+    "url": null
+  },
+  {
+    "id": null,
+    "title": "My Third Spring Data Blog Post",
+    "description": "A third post about spring data",
+    "status": "IDEA",
+    "contentType": "ARTICLE",
+    "dateCreated": "2023-08-04T20:20:15.903106",
+    "dateUpdated": null,
+    "url": null
+  }
+]
