@@ -1,21 +1,20 @@
 package dev.osmanfindik.contentcalendar.controller;
 
-import org.springframework.beans.factory.annotation.Value;
+import dev.osmanfindik.contentcalendar.config.ContentCalendarProperties;
+import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import java.util.Map;
-
 @RestController
 public class HomeController {
-	@Value("${cc.welcomeMessage: Default Welcome Message}")
-	private String welcomeMessage;
+	private final ContentCalendarProperties contentCalendarProperties;
 
-	@Value("${cc.about}")
-	private String about;
+	public HomeController (ContentCalendarProperties contentCalendarProperties) {
+		this.contentCalendarProperties = contentCalendarProperties;
+	}
 
 	@GetMapping("/")
-	public Map<String, String> home () {
-		return Map.of ("welcomeMessage", welcomeMessage, "about", about);
+	public ContentCalendarProperties home () {
+		return contentCalendarProperties;
 	}
 }

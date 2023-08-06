@@ -1,0 +1,19 @@
+spring:
+  datasource:
+    url: "jdbc:postgresql://localhost:5432/postgres"
+    username: "postgres"
+    password: "password"
+    driver-class-name: "org.postgresql.Driver"
+  sql:
+    init:
+      mode: "always"
+
+logging:
+  level:
+    org:
+      springframework:
+        jdbc: "DEBUG"
+
+cc:
+  about: "This is a Calendar Content Application"
+  welcome-message: "Welcome to Content Calendar"
