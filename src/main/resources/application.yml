@@ -21,3 +21,13 @@ cc:
   about: "This is a Calendar Content Application"
   welcome-message: "Welcome to Content Calendar"
 
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+          - "*"
+  endpoint:
+    health:
+      show-details: "always"
+
