@@ -7,6 +7,9 @@ spring:
   sql:
     init:
       mode: "always"
+  profiles:
+    active:
+      - production
 
 logging:
   level:
@@ -17,3 +20,4 @@ logging:
 cc:
   about: "This is a Calendar Content Application"
   welcome-message: "Welcome to Content Calendar"
+
