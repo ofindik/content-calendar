@@ -2,3 +2,8 @@ cc:
   about: "PRODUCTION about message"
   welcome-message: "Welcome to PRODUCTION"
 
+spring:
+  datasource:
+    url: "postgresql://postgres:${PGHOST}:${PGPORT}/${PGDATABASE}"
+    username: "${PGUSER}"
+    password: "${PGPASSWORD}"
